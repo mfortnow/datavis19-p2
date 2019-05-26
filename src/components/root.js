@@ -2,6 +2,7 @@ import React from 'react';
 import {csv} from 'd3-fetch';
 import ExampleChart from './example-chart';
 import Chart1 from './chart1';
+import Chart2 from './mollychart';
 
 
 const longBlock = `
@@ -29,6 +30,13 @@ class RootComponent extends React.Component {
           loading: false
         });
       });
+    // csv('data/dc-wikia-data.csv')
+    //   .then(ddata => {
+    //     this.setState({
+    //       ddata,
+    //       loading: false
+    //     });
+    //   });
   }
 
   render() {
@@ -41,9 +49,11 @@ class RootComponent extends React.Component {
         <h1> Hello Explainable!</h1>
         <div>{`The example data was loaded! There are ${data.length} rows`}</div>
         <Chart1 data={data}/>
+        <div>{'LMAO this is a mess like my LIFEEE (bitch)'}</div>
+        <Chart2 data={data}/>
         <div>{longBlock}</div>
+        <div>{'heres the example chart fuckers'}</div>
         <ExampleChart data={data}/>
-        <div>{longBlock}</div>
       </div>
     );
   }
