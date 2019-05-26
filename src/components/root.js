@@ -1,6 +1,8 @@
 import React from 'react';
 import {csv} from 'd3-fetch';
 import ExampleChart from './example-chart';
+import Chart1 from './chart1';
+
 
 const longBlock = `
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -20,7 +22,7 @@ class RootComponent extends React.Component {
   }
 
   componentWillMount() {
-    csv('data/sample-data.csv')
+    csv('data/marvel-wikia-data.csv')
       .then(data => {
         this.setState({
           data,
@@ -38,7 +40,7 @@ class RootComponent extends React.Component {
       <div className="relative">
         <h1> Hello Explainable!</h1>
         <div>{`The example data was loaded! There are ${data.length} rows`}</div>
-        <ExampleChart data={data}/>
+        <Chart1 data={data}/>
         <div>{longBlock}</div>
         <ExampleChart data={data}/>
         <div>{longBlock}</div>
