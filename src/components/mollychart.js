@@ -26,6 +26,9 @@ function getdat(data) {
     if (row.GSM === '') {
       queer = {identity: 'Straight', year: Number(row.Year), alive: row.ALIVE};
     }
+    // else {
+    //   return acc;
+    // }
     acc.push(queer);
     return acc;
   }, []);
@@ -51,6 +54,49 @@ function getdattwothestreets(data, key) {
   }
 }
 
+// function groupBye(data, key, keyoi, ckeyoi) {
+//   return data.reduce((acc, row) => {
+//     if (row[key] === 0 || (isNaN(row[key]))) {
+//       return acc;
+//     }
+//     if (!acc[row[key]]) {
+//       acc[row[key]] = [];
+//     }
+//     if (ckeyoi === 'All Queer') {
+//       if (acc[row[keyoi]] != 'Straight') {
+//         acc[row[key]].push(row);
+//       }
+//     }
+//     else if (acc[row[keyoi]] === ckeyoi) {
+//       acc[row[key]].push(row);
+//     }
+//     return acc;
+//   }, {});
+// }
+
+function groupByYear(data, keyoi) {
+  const rtn = data.reduce((acc, d) => {
+    if (d.year === 0 || (isNaN(d.year))) {
+      return acc;
+    }
+    if (!acc[d.year]) {
+      acc[d.year] = [];
+    }
+    if (keyoi === 'All Queer') {
+      if (d.identity != 'Straight') {
+        acc[d.year].push(d);
+      }
+      return acc;
+    }
+    if (d.identity === keyoi) {
+      acc[d.year].push(d);
+    }
+    return acc;
+  }, {});
+  console.log("groupbye", rtn);
+  return rtn;
+}
+
 const buttons = ['All Queer', 'Homosexual', 'Bisexual', 'Pansexual', 'Straight'];
 
 export default class Chart2 extends Component {
@@ -65,10 +111,15 @@ export default class Chart2 extends Component {
   render() {
     const {value, keyOfInterest} = this.state;
     const {data} = this.props;
-    const preppedData = Object.entries(groupBy(getdattwothestreets(getdat(data), keyOfInterest), 'year'))
+    const preppedData = Object.entries(groupByYear(getdat(data), keyOfInterest))
       .map(([key, values]) => {
         return {x: Number(key), y: values.length};
       });
+    console.log(getdat(data));
+    // const preppedData = Object.entries(groupBy(getdattwothestreet(getdat(data), keyOfInterest), 'year'))
+    //   .map(([key, values]) => {
+    //     return {x: Number(key), y: values.length};
+    //   });
     console.log(preppedData);
     // [{Label: 'Blonde', Size: 66}, {}
     return (
@@ -79,7 +130,13 @@ export default class Chart2 extends Component {
           <LineSeries
           animation
           data={preppedData}
-          onValueMouseOver={v => this.setState({value: v})}
+          // onValueMouseOver={v => this.setState({value: v})}
+          // onSeriesMouseOut={v => this.setState({value: false})}
+          // onNearestX={(datapoint, event)=>{
+          //   // does something on mouseover
+          //   // you can access the value of the event
+          // }}
+          onNearestXY={v => this.setState({value: v})}
           onSeriesMouseOut={v => this.setState({value: false})}
           />
           <XAxis title="Year" />
