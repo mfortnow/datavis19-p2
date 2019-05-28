@@ -113,7 +113,7 @@ export default class Chart2 extends Component {
     const {data} = this.props;
     const preppedData = Object.entries(groupByYear(getdat(data), keyOfInterest))
       .map(([key, values]) => {
-        return {x: Number(key), y: values.length};
+        return {Year: Number(key), Number: values.length};
       });
     console.log(getdat(data));
     // const preppedData = Object.entries(groupBy(getdattwothestreet(getdat(data), keyOfInterest), 'year'))
@@ -126,9 +126,12 @@ export default class Chart2 extends Component {
       <div>
         <XYPlot
           width={300}
-          height={300}>
+          height={300}
+          getX={d => d.Year}
+          getY={d => d.Number}>
           <LineSeries
           animation
+          style={{strokeLinejoin: "round"}}
           data={preppedData}
           // onValueMouseOver={v => this.setState({value: v})}
           // onSeriesMouseOut={v => this.setState({value: false})}
