@@ -3,6 +3,7 @@ import {csv} from 'd3-fetch';
 import ExampleChart from './example-chart';
 import Chart1 from './chart1';
 import Chart2 from './mollychart';
+import Chart3 from './alignchart';
 
 
 const longBlock = `
@@ -52,6 +53,8 @@ class RootComponent extends React.Component {
         <div>{'LMAO this is a mess like my LIFEEE (bitch)'}</div>
         <Chart2 data={data}/>
         <div>{longBlock}</div>
+        <div>{'cutting edge journalism'}</div>
+        <Chart3 data={data}/>
         <div>{'heres the example chart fuckers'}</div>
         <ExampleChart data={data}/>
       </div>
