@@ -11,20 +11,32 @@ function groupBy(data, key) {
   }, {});
 }
 
+let year = -1;
+function yearer(yea) {
+
+}
+
 function getdat(data) {
   return data.reduce((acc, row) => {
+    let year = -1;
+    if (Number.isNaN(Number(row.Year))) {
+      year = Number(row.YEAR);
+    }
+    else {
+      year = Number(row.Year);
+    }
     let queer = {};
     if (row.GSM === 'Homosexual Characters') {
-      queer = {identity: 'Homosexual', year: Number(row.Year), alive: row.ALIVE};
+      queer = {identity: 'Homosexual', year: year, alive: row.ALIVE};
     }
     if (row.GSM === 'Bisexual Characters') {
-      queer = {identity: 'Bisexual', year: Number(row.Year), alive: row.ALIVE};
+      queer = {identity: 'Bisexual', year: year, alive: row.ALIVE};
     }
     if (row.GSM === 'Pansexual Characters') {
-      queer = {identity: 'Pansexual', year: Number(row.Year), alive: row.ALIVE};
+      queer = {identity: 'Pansexual', year: year, alive: row.ALIVE};
     }
     if (row.GSM === '') {
-      queer = {identity: 'Straight', year: Number(row.Year), alive: row.ALIVE};
+      queer = {identity: 'Straight', year: year, alive: row.ALIVE};
     }
     // else {
     //   return acc;

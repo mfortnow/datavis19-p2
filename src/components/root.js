@@ -24,7 +24,9 @@ class RootComponent extends React.Component {
   }
 
   componentWillMount() {
-    csv('data/marvel-wikia-data.csv')
+    Promise.all([csv('data/marvel-wikia-data.csv'),
+                csv('data/dc-wikia-data.csv'),
+                csv('data/avengers.csv')])
       .then(data => {
         this.setState({
           data,
@@ -38,6 +40,7 @@ class RootComponent extends React.Component {
     //       loading: false
     //     });
     //   });
+    //   console.log(this);
   }
 
   render() {
@@ -48,15 +51,16 @@ class RootComponent extends React.Component {
     return (
       <div className="relative">
         <h1> Hello Explainable!</h1>
-        <div>{`The example data was loaded! There are ${data.length} rows`}</div>
-        <Chart1 data={data}/>
+        <div>{`The example data was loaded! There are ${data[0].length} rows`}</div>
+        <Chart1 data={data[0]}/>
+        <Chart1 data={data[1]}/>
         <div>{'LMAO this is a mess like my LIFEEE (bitch)'}</div>
-        <Chart2 data={data}/>
+        <div><Chart2 data={data[0]}/> <Chart2 data={data[1]}/></div>
         <div>{longBlock}</div>
         <div>{'cutting edge journalism'}</div>
-        <Chart3 data={data}/>
+        <Chart3 data={data[0]}/>
         <div>{'heres the example chart fuckers'}</div>
-        <ExampleChart data={data}/>
+        <ExampleChart data={data[0]}/>
       </div>
     );
   }
