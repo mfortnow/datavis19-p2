@@ -4,6 +4,7 @@ import ExampleChart from './example-chart';
 import Chart1 from './chart1';
 import Chart2 from './mollychart';
 import Chart3 from './alignchart';
+import Chart5 from './doopchart';
 
 
 const longBlock = `
@@ -60,7 +61,7 @@ class RootComponent extends React.Component {
         <div>{'cutting edge journalism'}</div>
         <Chart3 data={data[0]}/>
         <div>{'heres the example chart fuckers'}</div>
-        <ExampleChart data={data[0]}/>
+        <Chart5/>
       </div>
     );
   }
