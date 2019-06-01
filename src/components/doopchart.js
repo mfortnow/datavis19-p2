@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {VerticalRectSeries, Hint, XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries} from 'react-vis';
+import {LabelSeries, VerticalRectSeries, Hint, XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries} from 'react-vis';
 
 const buttons = ['True', 'False'];
 
@@ -16,8 +16,12 @@ export default class Chart5 extends Component {
     const {value, keyOfInterest} = this.state;
     const data = [{Text: 'yo1', tf: 1}, {Text: 'yo2', tf: 0}, {Text: 'yo3', tf: 1},
                     {Text: 'yo4', tf: 0}, {Text: 'yo5', tf: 0}, {Text: 'yeet', tf: 1}];
-    const position = [{x0: 100, x: 500, y0: 0, y: 200}, {x0: 100, x: 500, y0: 200, y: 400}, {x0: 100, x: 500, y0: 400, y: 600},
-                  {x0: 100, x: 500, y0: 600, y: 800}, {x0: 100, x: 500, y0: 800, y: 1000}, {x0: 100, x: 500, y0: 1000, y: 1200}];
+    const position = [{x0: 100, x: 500, y0: 0, y: 200, Text: 'yo1', tf: 1},
+                      {x0: 100, x: 500, y0: 200, y: 400, Text: 'yo2', tf: 0},
+                      {x0: 100, x: 500, y0: 400, y: 600, Text: 'yo3', tf: 1},
+                      {x0: 100, x: 500, y0: 600, y: 800, Text: 'yo4', tf: 0},
+                      {x0: 100, x: 500, y0: 800, y: 1000, Text: 'yo5', tf: 0},
+                      {x0: 100, x: 500, y0: 1000, y: 1200, Text: 'yeet', tf: 1}];
     // const preppedData = data;
 
     // const preppedData = Object.entries(groupByYear(getdat(data), keyOfInterest))
@@ -59,13 +63,44 @@ export default class Chart5 extends Component {
       <VerticalRectSeries
         animation
         //cluster="align"
-        color="white"
         stroke="black"
-        data={position}
-        onNearestXY={v => this.setState({value: v})}
+        // data={position}
+        data={position.map(row => {
+              if (this.state.value && this.state.value.tf === 0) {
+                return {...row, style: {color: 'red', opacity: 0.5}};
+              }
+              if (this.state.value && this.state.value.tf === 1) {
+                return {...row, style: {color: 'green', opacity: 0.5}};
+              }
+              return row;
+            })}
+        // onNearestXY={v => this.setState({value: v})}
         onValueClick={v => this.setState({value: v})}
         onSeriesMouseOut={v => this.setState({value: false})}
       />
+      <LabelSeries
+        style={{pointerEvents: 'none'}}
+        data={position.map(row => {
+              if (this.state.value && this.state.value.tf === 0) {
+                row.Text = 'False';
+              }
+              if (this.state.value && this.state.value.tf === 1) {
+                row.Text = 'True';
+              }
+              return row;
+            })}
+        labelAnchorX="middle"
+        labelAnchorY="middle"
+        getLabel={d => `${d.Text}`}
+        onValueClick={v => {
+          if (this.state.value) {
+            this.setState({value: false})
+          }
+          else {
+            this.setState({value: v})
+          }}}
+        onSeriesMouseOut={v => this.setState({value: false})}
+        />
       {value !== false && <Hint value={value} />}
       </XYPlot>
     </div>
