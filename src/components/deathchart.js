@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {RadialChart, Hint} from 'react-vis';
+import {Sunburst, Hint} from 'react-vis';
 
 function groupBy(data, key) {
   return data.reduce((acc, row) => {
@@ -10,6 +10,41 @@ function groupBy(data, key) {
     return acc;
   }, {});
 }
+
+function death(data) {
+	return data.reduce((acc, row) => {
+
+
+
+
+
+	return acc;
+	});
+}
+
+
+
+export default class Chart1 extends Component {
+  constructor() {
+    super();
+    this.state = {
+      value: false,
+      keyOfInterest: 'Female'
+    };
+  }
+
+  render() {
+  	const {value, keyOfInterest} = this.state;
+    const {data} = this.props;
+    const preppedData = death(data);
+
+  	return() {
+
+  	}
+  }
+
+}
+
 
 
 
