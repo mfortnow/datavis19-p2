@@ -77,7 +77,16 @@ class RootComponent extends React.Component {
           </table>
         <div>{longBlock}</div>
         <div>{'cutting edge journalism'}</div>
-        <Chart3 data={data[0]}/>
+        <table cellpadding="20">
+          <thead>
+            <th>Marvel</th>
+            <th>DC</th>
+          </thead>
+          <tbody>
+            <th><div><Chart3 data={data[0]}/></div></th>
+            <th><div><Chart3 data={data[1]}/></div></th>
+          </tbody>
+        </table>
         <div>{'Uh I guess this is a thing'}</div>
         <Chart4/>
         <div>{'heres the doop chart fuckers'}</div>
