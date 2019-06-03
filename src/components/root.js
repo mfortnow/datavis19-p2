@@ -62,7 +62,7 @@ class RootComponent extends React.Component {
         <div>{'cutting edge journalism'}</div>
         <Chart3 data={data[0]}/>
         <div>{'Uh I guess this is a thing'}</div>
-        <Chart4/>
+        <Chart4 />
         <div>{'heres the doop chart fuckers'}</div>
         <Chart5/>
       </div>
