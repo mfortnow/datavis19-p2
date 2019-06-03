@@ -66,6 +66,7 @@ export default class Chart3 extends Component {
     }));
     console.log(preppedData);
     // [{Label: 'Blonde', Size: 66}, {}
+
     return (
       <div>
         <XYPlot
@@ -82,7 +83,7 @@ export default class Chart3 extends Component {
           onNearestXY={v => this.setState({value: v})}
           onSeriesMouseOut={v => this.setState({value: false})}
         />
-        {value !== false && <Hint value={value} />}
+        {value !== false && <Hint value={{Number: value.y}} />}
         <XAxis />
         <YAxis />
         </XYPlot>
