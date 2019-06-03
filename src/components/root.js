@@ -54,10 +54,27 @@ class RootComponent extends React.Component {
       <div className="relative">
         <h1> Hello Explainable!</h1>
         <div>{`The example data was loaded! There are ${data[0].length} rows`}</div>
-        <Chart1 data={data[0]}/>
-        <Chart1 data={data[1]}/>
+        <table cellpadding="20">
+          <thead>
+            <th>Marvel</th>
+            <th>DC</th>
+          </thead>
+          <tbody>
+            <th><div><Chart1 data={data[0]}/></div></th>
+            <th><div><Chart1 data={data[1]}/></div></th>
+          </tbody>
+        </table>
         <div>{'LMAO this is a mess like my LIFEEE (bitch)'}</div>
-        <div><Chart2 data={data[0]}/> <Chart2 data={data[1]}/></div>
+        <table cellpadding="10">
+        <thead>
+          <th>Marvel</th>
+          <th>DC</th>
+          </thead>
+          <tbody>
+            <th><div className = "chart2"><Chart2 data={data[0]}/></div> </th>
+            <th><div className = "chart2"><Chart2 data={data[1]}/></div></th>
+            </tbody>
+          </table>
         <div>{longBlock}</div>
         <div>{'cutting edge journalism'}</div>
         <Chart3 data={data[0]}/>
