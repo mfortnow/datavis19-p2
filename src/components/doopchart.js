@@ -91,6 +91,8 @@ export default class Chart5 extends Component {
             })}
         labelAnchorX="middle"
         labelAnchorY="middle"
+        xOffset = "-250"
+        yOffset = "100"
         getLabel={d => `${d.Text}`}
         onValueClick={v => {
           if (this.state.value) {

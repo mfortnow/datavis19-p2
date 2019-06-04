@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {LabelSeries, VerticalRectSeries, Text, Hint, XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries} from 'react-vis';
+import {LabelSeries, VerticalRectSeries, Hint, XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries} from 'react-vis';
 
 const buttons = ['True', 'False'];
 
@@ -18,9 +18,9 @@ function getdat(d, keyOfInterest, text){
       labz = "where the belief"
     }
   } else {
-    return ([{x: 0, y:0, label: text, yOffset: 100, xOffset: -250}]);
+    return ([{x: 0, y:0, label: text, yOffset: 100, xOffset: -300}]);
   }
-  return ([{x: 0, y: 0, label: labz, yOffset:100, xOffset:-250}]);
+  return ([{x: 0, y: 0, label: labz, yOffset:100, xOffset:-300}]);
 }
 
 export default class Dooper extends Component {
@@ -111,7 +111,7 @@ export default class Dooper extends Component {
     //   {value !== false && <Hint value={value} />}
     //   </XYPlot>
     // </div>
-    <div>
+    <div className="doop" align="center">
       <XYPlot
         className="doop"
          width={600}
@@ -122,34 +122,27 @@ export default class Dooper extends Component {
         data={prepped}
         labelAnchorX="middle"
         labelAnchorY="middle"
-        onValueClick={v => {
-          if (this.state.value) {
-            this.setState({value: false})
-          }
-          else {
-            this.setState({value: v})
-          }}}
+        onValueClick={v => this.setState({keyOfInterest:'Text'})}
+        // onValueClick={v => {
+        //   if (this.state.value) {
+        //     this.setState({value: false})
+        //   }
+        //   else {
+        //     this.setState({value: v})
+        //   }}}
         onSeriesMouseOut={v => this.setState({value: false})}
         >
-      <VerticalRectSeries
-      animation
-      //cluster="align"
-      stroke="black"
-      // data={position}
-      data={prepos}
-      // onNearestXY={v => this.setState({value: v})}
-      // onValueClick={v => this.setState({value: v})}
-      // onSeriesMouseOut={v => this.setState({value: false})}
-      />
+
         </LabelSeries>
       {value !== false && <Hint value={value} />}
       </XYPlot>
+      <div className="button" align="center">
       {buttons.map(key => {
         return (<button
           key={key}
           onClick={() => this.setState({keyOfInterest: key})}
           >{key}</button>);
-      })}
+      })}</div>
     </div>
   );
 }
