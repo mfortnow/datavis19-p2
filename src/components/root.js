@@ -4,7 +4,7 @@ import ExampleChart from './example-chart';
 import Chart1 from './chart1';
 import Chart2 from './mollychart';
 import Chart3 from './alignchart';
-//import Chart4 from './deathchart';
+import Chart4 from './deathchart';
 import Chart5 from './doopchart';
 import Dooper from './doop'
 
@@ -100,6 +100,7 @@ class RootComponent extends React.Component {
           </tbody>
         </table>
         <div>{'Uh I guess this is a thing'}</div>
+        <Chart4 data={data[2]}/>
         <div>{'heres the doop chart fuckers'}</div>
         <div id="doopinfo">
           <p>Click the text see the fact again</p>
