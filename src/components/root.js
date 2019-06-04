@@ -98,7 +98,7 @@ class RootComponent extends React.Component {
           </tbody>
         </table>
         <div>{'Uh I guess this is a thing'}</div>
-        <Chart4/>
+        <Chart4 />
         <div>{'heres the doop chart fuckers'}</div>
         <table>
           <tbody>
