@@ -6,7 +6,17 @@ import Chart2 from './mollychart';
 import Chart3 from './alignchart';
 import Chart4 from './deathchart';
 import Chart5 from './doopchart';
+import Dooper from './doop'
 
+
+const doops = [{Text: 'yo1', True: "1", False: "0"}, {Text: 'yo2', tf: 0}, {Text: 'yo3', tf: 1},
+                {Text: 'yo4', tf: 0}, {Text: 'yo5', tf: 0}, {Text: 'yeet', tf: 1}];
+const position = [{x0: 100, x: 500, y0: 0, y: 200, Text: 'yo1', tf: 1},
+                  {x0: 100, x: 500, y0: 200, y: 400, Text: 'yo2', tf: 0},
+                  {x0: 100, x: 500, y0: 400, y: 600, Text: 'yo3', tf: 1},
+                  {x0: 100, x: 500, y0: 600, y: 800, Text: 'yo4', tf: 0},
+                  {x0: 100, x: 500, y0: 800, y: 1000, Text: 'yo5', tf: 0},
+                  {x0: 100, x: 500, y0: 1000, y: 1200, Text: 'yeet', tf: 1}];
 
 const longBlock = `
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -83,14 +93,18 @@ class RootComponent extends React.Component {
             <th>DC</th>
           </thead>
           <tbody>
-            <th><div><Chart3 data={data[0]}/></div></th>
-            <th><div><Chart3 data={data[1]}/></div></th>
+            <th><Chart3 data={data[0]}/></th>
+            <th><Chart3 data={data[1]}/></th>
           </tbody>
         </table>
         <div>{'Uh I guess this is a thing'}</div>
         <Chart4/>
         <div>{'heres the doop chart fuckers'}</div>
-        <Chart5/>
+        <table>
+          <tbody>
+            <tr><Dooper data={doops[0]}/></tr>
+          </tbody>
+        </table><Chart5/>
       </div>
     );
   }
