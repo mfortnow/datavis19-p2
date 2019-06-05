@@ -1,7 +1,7 @@
 /* EDIT ANYTHING YOU WANT */
 .title {
   color: black;
-  font-family: Roboto-Black;
+  font-family: Helvetica;
   font-size: 36px;
   font-weight: bold;
 }
@@ -10,6 +10,11 @@
   background-color: #339933;
   border-radius: 25px;
   border: 2px solid #004d00;
+}
+
+#deathchart{
+  width: 800px;
+  float: center;
 }
 
 #doopinfo{
@@ -21,6 +26,15 @@
   box-shadow: 10px 10px 5px grey;
 }
 
+.textbody{
+  margin: 20px;
+}
+
+.chart{
+  background-color: #f0f0f5;
+  padding: 10px;
+  box-shadow: 10px 10px 5px grey;
+}
 
 .subtitle {
   color: black;

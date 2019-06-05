@@ -84,8 +84,8 @@ class RootComponent extends React.Component {
             <th>DC</th>
           </thead>
           <tbody>
-            <th><div><Chart1 data={data[0]}/></div></th>
-            <th><div><Chart1 data={data[1]}/></div></th>
+            <th><div className="chart"><Chart1 data={data[0]}/></div></th>
+            <th><div className="chart"><Chart1 data={data[1]}/></div></th>
           </tbody>
         </table>
         <div>{'LMAO this is a mess like my LIFEEE (bitch)'}</div>
@@ -95,13 +95,13 @@ class RootComponent extends React.Component {
             <th>DC</th>
           </thead>
           <tbody>
-            <th><Chart3 data={data[0]}/></th>
-            <th><Chart3 data={data[1]}/></th>
+            <th><div className="chart"><Chart3 data={data[0]}/></div></th>
+            <th><div className="chart"><Chart3 data={data[1]}/></div></th>
           </tbody>
           </table>
-        <div>{longBlock}</div>
+        <div className="textbody">{longBlock}</div>
         <div>{'Uh I guess this is a thing'}</div>
-        <Chart4 data={data[2]}/>
+        <div className="chart" id="deathchart" align="center"><Chart4 data={data[2]}/></div>
         <div>{'heres the doop chart fuckers'}</div>
         <div>{'cutting edge journalism'}</div>
         <table cellpadding="20">
@@ -110,8 +110,8 @@ class RootComponent extends React.Component {
             <th>DC</th>
           </thead>
           <tbody>
-            <th><Chart2 data={data[0]}/></th>
-            <th><Chart2 data={data[1]}/></th>
+            <th><div className="chart"><Chart2 data={data[0]}/></div></th>
+            <th><div className="chart"><Chart2 data={data[1]}/></div></th>
           </tbody>
         </table>
         <div>
