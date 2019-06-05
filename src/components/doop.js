@@ -6,21 +6,23 @@ const buttons = ['True', 'False'];
 function getdat(d, keyOfInterest, text){
   var labz = "";
   if(keyOfInterest=='True') {
-    if(Number(d.True)===1){
-      labz = "you get it";
-    }else {
-      labz = "NEE";
-    }
+    labz = d.True;
+    // if(Number(d.True)===1){
+    //   labz = "you get it";
+    // }else {
+    //   labz = "NEE";
+    // }
   } else if(keyOfInterest=='False'){
-    if(d.False===1){
-      labz = "yee...";
-    }else {
-      labz = "where the belief"
-    }
+    labz = d.False;
+    // if(d.False===1){
+    //   labz = "yee...";
+    // }else {
+    //   labz = "where the belief"
+    // }
   } else {
-    return ([{x: 0, y:0, label: text, yOffset: 100, xOffset: -300, source:""}]);
+    return ([{x: 0, y:0, label: text, yOffset: 100, xOffset: -400, source:""}]);
   }
-  return ([{x: 0, y: 0, label: labz, yOffset:100, xOffset:-300, source: d.Source}]);
+  return ([{x: 0, y: 0, label: labz, yOffset:100, xOffset:-400, source: d.Source}]);
 }
 
 export default class Dooper extends Component {
@@ -114,11 +116,11 @@ export default class Dooper extends Component {
     <div className="doop" align="center">
       <XYPlot
         className="doop"
-         width={600}
+         width={800}
          height={200}
       >
 
-      <LabelSeries
+ <LabelSeries
         //style={{pointerEvents: 'none'}}
         data={prepped}
         labelAnchorX="middle"

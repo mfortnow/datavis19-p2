@@ -111,8 +111,8 @@ export default class Chart4 extends Component {
           // }}
           onValueMouseOver={v => this.setState({value: v})}
           onSeriesMouseOut={v => this.setState({value: false})}
-          width={500}
-          height={500}
+          width={700}
+          height={700}
           padAngle={0.02}
         >
           {value !== false && <Hint value={value} />}
