@@ -115,27 +115,20 @@ class RootComponent extends React.Component {
             <th><div className="chart"><Chart3 data={data[1]}/></div></th>
           </tbody>
           </table>
-<<<<<<< HEAD
         <div className="textbody">{longBlock}</div>
         <div>{'Uh I guess this is a thing'}</div>
         <div className="chart" id="deathchart" align="center"><Chart4 data={data[2]}/></div>
         <div>{'heres the doop chart fuckers'}</div>
         <div>{'cutting edge journalism'}</div>
-=======
         <div
         className="text"
         >{longBlock}</div>
-        <div
-        className="text"
-        >{'Uh I guess this is a thing'}</div>
-        <Chart4 data={data[2]}/>
         <div
         className="text"
         >{'heres the doop chart fuckers'}</div>
         <div
         className="text"
         >{'cutting edge journalism'}</div>
->>>>>>> 1e522fadbf5dff24bdb1eff765b35368cdf451d1
         <table cellpadding="20">
           <thead>
             <th
