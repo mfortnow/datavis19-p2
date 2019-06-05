@@ -4,7 +4,7 @@ import ExampleChart from './example-chart';
 import Chart1 from './chart1';
 import Chart2 from './mollychart';
 import Chart3 from './alignchart';
-import Chart4 from './deathchart';
+import Chart4 from './deathchart2';
 import Chart5 from './doopchart';
 import Dooper from './doop'
 
