@@ -8,6 +8,8 @@
 
 .doop{
   background-color: #339933;
+  border-radius: 25px;
+  border: 2px solid #004d00;
 }
 
 .subtitle {
@@ -82,6 +84,7 @@
 
 .relative {
   position: relative;
+  background-color: #ccffe6;
 }
 
 .absolute {
