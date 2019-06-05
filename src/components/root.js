@@ -118,8 +118,8 @@ class RootComponent extends React.Component {
         <div className="textbody">{longBlock}</div>
         <div>{'Uh I guess this is a thing'}</div>
         <div className="chart" id="deathchart" align="center"><Chart4 data={data[2]}/></div>
-        <div>{'heres the doop chart fuckers'}</div>
-        <div>{'cutting edge journalism'}</div>
+        <div className="text">{'heres the doop chart fuckers'}</div>
+        <div className="text">{'cutting edge journalism'}</div>
         <div
         className="text"
         >{longBlock}</div>
