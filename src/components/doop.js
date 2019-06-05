@@ -18,9 +18,9 @@ function getdat(d, keyOfInterest, text){
       labz = "where the belief"
     }
   } else {
-    return ([{x: 0, y:0, label: text, yOffset: 100, xOffset: -300}]);
+    return ([{x: 0, y:0, label: text, yOffset: 100, xOffset: -300, source:""}]);
   }
-  return ([{x: 0, y: 0, label: labz, yOffset:100, xOffset:-300}]);
+  return ([{x: 0, y: 0, label: labz, yOffset:100, xOffset:-300, source: d.Source}]);
 }
 
 export default class Dooper extends Component {
@@ -117,6 +117,7 @@ export default class Dooper extends Component {
          width={600}
          height={200}
       >
+
       <LabelSeries
         //style={{pointerEvents: 'none'}}
         data={prepped}
@@ -132,7 +133,6 @@ export default class Dooper extends Component {
         //   }}}
         onSeriesMouseOut={v => this.setState({value: false})}
         >
-
         </LabelSeries>
       {value !== false && <Hint value={value} />}
       </XYPlot>
