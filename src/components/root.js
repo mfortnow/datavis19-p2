@@ -4,15 +4,17 @@ import ExampleChart from './example-chart';
 import Chart1 from './chart1';
 import Chart2 from './mollychart';
 import Chart3 from './alignchart';
-import Chart4 from './deathchart';
-import Chart5 from './doopchart';
+// import Chart4 from './deathchart';
+//import Chart5 from './doopchart';
 import Dooper from './doop'
 
 
 const doops = [{Text: 'doop is da bomb', True: 0, False: 1},
                {Text: 'doop is da bomb digitty at math', True: 1, False: 0},
-               {Text: 'yo3', tf: 1},
-                {Text: 'yo4', tf: 0}, {Text: 'yo5', tf: 0}, {Text: 'yeet', tf: 1}];
+               {Text: 'yo3', True: 1, False: 0},
+               {Text: 'yo4', tf: 0},
+               {Text: 'yo5', tf: 0},
+               {Text: 'yeet', tf: 1}];
 const position = [{x0: 100, x: 500, y0: 0, y: 200, Text: 'yo1', tf: 1},
                   {x0: 100, x: 500, y0: 200, y: 400, Text: 'yo2', tf: 0},
                   {x0: 100, x: 500, y0: 400, y: 600, Text: 'yo3', tf: 1},
@@ -100,14 +102,14 @@ class RootComponent extends React.Component {
           </tbody>
         </table>
         <div>{'Uh I guess this is a thing'}</div>
-        <Chart4 data={data[2]}/>
+
         <div>{'heres the doop chart fuckers'}</div>
         <div id="doopinfo">
-          <p>Click the text see the fact again</p>
+          <b>Click the text see the fact again</b>
         </div>
         <table>
           <tbody>
-            <tr><Dooper data={doops[0]}/></tr>
+            <tr><div><Dooper data={doops[0]}/></div></tr>
             <tr><Dooper data={doops[1]}/></tr>
           </tbody>
         </table>
