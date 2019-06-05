@@ -72,42 +72,70 @@ class RootComponent extends React.Component {
   render() {
     const {loading, data} = this.state;
     if (loading) {
-      return <h1>LOADING</h1>;
+      return <h1
+      className="title"
+      >LOADING</h1>;
     }
     return (
       <div className="relative" align="center">
-        <h1> Hello Explainable!</h1>
-        <div>{`The example data was loaded! There are ${data[0].length} rows`}</div>
+        <h1
+        className="title"
+        > Hello Explainable!</h1>
+        <div
+        className="text"
+        >{`The example data was loaded! There are ${data[0].length} rows`}</div>
         <table cellpadding="20">
           <thead>
-            <th>Marvel</th>
-            <th>DC</th>
+            <th
+            className="subtitle"
+            >Marvel</th>
+            <th
+            className="subtitle"
+            >DC</th>
           </thead>
           <tbody>
             <th><div><Chart1 data={data[0]}/></div></th>
             <th><div><Chart1 data={data[1]}/></div></th>
           </tbody>
         </table>
-        <div>{'LMAO this is a mess like my LIFEEE (bitch)'}</div>
+        <div
+        className="text"
+        >{'LMAO this is a mess like my LIFEEE (bitch)'}</div>
           <table cellpadding="10">
           <thead>
-            <th>Marvel</th>
-            <th>DC</th>
+            <th
+            className="subtitle"
+            >Marvel</th>
+            <th
+            className="subtitle"
+            >DC</th>
           </thead>
           <tbody>
             <th><Chart3 data={data[0]}/></th>
             <th><Chart3 data={data[1]}/></th>
           </tbody>
           </table>
-        <div>{longBlock}</div>
-        <div>{'Uh I guess this is a thing'}</div>
+        <div
+        className="text"
+        >{longBlock}</div>
+        <div
+        className="text"
+        >{'Uh I guess this is a thing'}</div>
         <Chart4 data={data[2]}/>
-        <div>{'heres the doop chart fuckers'}</div>
-        <div>{'cutting edge journalism'}</div>
+        <div
+        className="text"
+        >{'heres the doop chart fuckers'}</div>
+        <div
+        className="text"
+        >{'cutting edge journalism'}</div>
         <table cellpadding="20">
           <thead>
-            <th>Marvel</th>
-            <th>DC</th>
+            <th
+            className="subtitle"
+            >Marvel</th>
+            <th
+            className="subtitle"
+            >DC</th>
           </thead>
           <tbody>
             <th><Chart2 data={data[0]}/></th>
@@ -115,7 +143,9 @@ class RootComponent extends React.Component {
           </tbody>
         </table>
         <div>
-          <b>Click the text see the fact again</b>
+          <b
+          className="text"
+          >Click the text see the fact again</b>
         </div>
         <table>
           <tbody>

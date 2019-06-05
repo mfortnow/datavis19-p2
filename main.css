@@ -1,7 +1,7 @@
 /* EDIT ANYTHING YOU WANT */
 .title {
   color: black;
-  font-family: Roboto-Black;
+  font-family: "Helvetica Neue", Helvetica, Arial sans-serif;
   font-size: 36px;
   font-weight: bold;
 }
@@ -24,7 +24,14 @@
 
 .subtitle {
   color: black;
-  font-family: Roboto-Black;
+  font-family: "Helvetica Neue", Helvetica, Arial sans-serif;
+  font-size: 16px;
+  font-weight: semi-bold;
+}
+
+.text {
+  color: black;
+  font-family: "Helvetica Neue", Helvetica, Arial sans-serif;
   font-size: 12px;
   font-weight: semi-bold;
 }
@@ -52,6 +59,7 @@
 
 .header {
   display: flex;
+  font-family: "Helvetica Neue", Helvetica, Arial sans-serif;
   flex-direction: column;
 }
 
