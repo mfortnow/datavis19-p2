@@ -155,7 +155,7 @@ export default class Chart2 extends Component {
           onSeriesMouseOut={v => this.setState({value: false})}
           />
           <XAxis title="Year" />
-          <YAxis title = "Whatever Button You Pressed (I guess)" />
+          <YAxis title = "Number of Characters Introduced" />
           {value !== false && <Hint value={value} />}
         </XYPlot>
         {buttons.map(key => {
