@@ -232,15 +232,15 @@ class RootComponent extends React.Component {
         </div>
         <table>
           <tbody>
-            <tr class="wrap"><Dooper data={doops[0]}/></tr>
-            <tr class="wrap"><Dooper data={doops[1]}/></tr>
-            <tr class="wrap"><Dooper data={doops[2]}/></tr>
-            <tr class="wrap"><Dooper data={doops[3]}/></tr>
-            <tr class="wrap"><Dooper data={doops[4]}/></tr>
-            <tr class="wrap"><Dooper data={doops[5]}/></tr>
+            <tr className="wrap"><Dooper data={doops[0]}/></tr>
+            <tr className="wrap"><Dooper data={doops[1]}/></tr>
+            <tr className="wrap"><Dooper data={doops[2]}/></tr>
+            <tr className="wrap"><Dooper data={doops[3]}/></tr>
+            <tr className="wrap"><Dooper data={doops[4]}/></tr>
+            <tr className="wrap"><Dooper data={doops[5]}/></tr>
           </tbody>
         </table>
-        <div class="textbody">
+        <div className="textbody">
           <p><a target="_blank" href="https://www.google.com/search?q=doop&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiFj7WO_d_iAhVQ1qwKHXIyBRAQ_AUIECgB&biw=1200&bih=1214">
           Please click this to see what Doop looks like!</a></p>
         	{postDoop}
