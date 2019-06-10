@@ -40,74 +40,74 @@ voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occa
 non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 `;
 
-const preBlonde = `In recent years, with the rise of the Marvel Cinematic Universe (MCU) and the 
-DC Extended Universe (DCEU), superheros have become a mainstream pop culture phenomenon on the big screen. 
-But with phase III of the MCU’s overarching plot finally at a close, we thought we’d take a look back at 
-the superheroes of the last 4 decades in the comics to see what sets them apart. One metric of this is 
-whether these comics have historically portrayed women and men differently, and whether we can see a bias 
-in the way women have been portrayed. One example: though blonde characters across genders do not make up 
+const preBlonde = `In recent years, with the rise of the Marvel Cinematic Universe (MCU) and the
+DC Extended Universe (DCEU), superheros have become a mainstream pop culture phenomenon on the big screen.
+But with phase III of the MCU’s overarching plot finally at a close, we thought we’d take a look back at
+the superheroes of the last 4 decades in the comics to see what sets them apart. One metric of this is
+whether these comics have historically portrayed women and men differently, and whether we can see a bias
+in the way women have been portrayed. One example: though blonde characters across genders do not make up
 a majority, there is a significantly higher percentage of blonde women than men in both marvel and DC.
 `;
 
-const postBlonde = `Looking at this data shows us that there is some bias between the way women are depicted 
-in comics which is consistent across these different companies. This data only includes superpeople; this ratio 
-might even be higher if non-super women were included. Female superheroes are often portrayed as incredibly 
-athletic with model-like beauty, especially in older comics. The data here begs the question of correlation 
+const postBlonde = `Looking at this data shows us that there is some bias between the way women are depicted
+in comics which is consistent across these different companies. This data only includes superpeople; this ratio
+might even be higher if non-super women were included. Female superheroes are often portrayed as incredibly
+athletic with model-like beauty, especially in older comics. The data here begs the question of correlation
 between this attractiveness and the higher proportion of blondeness in women than other characters.
 `;
 
-const preAlign = `Another interesting comparison between genders is that of alignment. Though the comics may 
-have gotten more progressive over the years,  there is still a clear bias of women as good characters -- Marvel 
-has more bad men than good, but the ratio of bad to good women is almost even; in DC, this comparison is even 
+const preAlign = `Another interesting comparison between genders is that of alignment. Though the comics may
+have gotten more progressive over the years,  there is still a clear bias of women as good characters -- Marvel
+has more bad men than good, but the ratio of bad to good women is almost even; in DC, this comparison is even
 more stark, with even more women being good than bad.
 `;
 
-const postAlign = `This is another indicator of women more likely to be seen as good and pure, and even neutral, 
-than bad. One possible explanation is that villains are often very conflicted, tortured souls, and comics have had 
+const postAlign = `This is another indicator of women more likely to be seen as good and pure, and even neutral,
+than bad. One possible explanation is that villains are often very conflicted, tortured souls, and comics have had
 a hard time portraying women as much more than one-dimensional, which often translates to good characters.
 `;
 
-const preDeath = `There are certainly more male Avengers than female, but that hasn’t stopped them from dying. 
-When it comes to jobs, being an Avenger is definitely one of the more dangerous professions. Many die; but many 
+const preDeath = `There are certainly more male Avengers than female, but that hasn’t stopped them from dying.
+When it comes to jobs, being an Avenger is definitely one of the more dangerous professions. Many die; but many
 don’t stay dead, and some don’t just die once. Scroll over to see how many times each avenger has kicked the bucket.
 `;
 
-const postDeath = `Jocasta has the record among the Avengers at 5 deaths. In terms of raw numbers of characters who 
-have died, the difference between Male and Female is not particularly significant: with 41 and 36% respectively dying 
-at some point. There does seem to be a slight difference in the spread, as Marvel seems more comfortable killing off 
+const postDeath = `Jocasta has the record among the Avengers at 5 deaths. In terms of raw numbers of characters who
+have died, the difference between Male and Female is not particularly significant: with 41 and 36% respectively dying
+at some point. There does seem to be a slight difference in the spread, as Marvel seems more comfortable killing off
 new male characters than female characters, while most female character deaths come from the older members of the Avengers.
 `;
 
-const preQueer = `So how have the comics, and their representation of the world, changed over time? One variable that 
-is an interesting metric is the introduction of queer characters. Certainly, both companies have introduced more queer 
+const preQueer = `So how have the comics, and their representation of the world, changed over time? One variable that
+is an interesting metric is the introduction of queer characters. Certainly, both companies have introduced more queer
 characters as time has gone on, especially in the past decade. But the optimism ends there.
 `;
 
-const queerNote = `(We chose to focus on sexuality rather than gender identity when discussing queer characters, 
-because lack of gender/gender non-conformity may be due to factors not related to representation, such as differences 
+const queerNote = `(We chose to focus on sexuality rather than gender identity when discussing queer characters,
+because lack of gender/gender non-conformity may be due to factors not related to representation, such as differences
 in species and magic.)
 `;
 
-const postQueer = `With superheroes becoming more mainstream and LGBTQ+ communities becoming more visible, it seems almost 
-inevitable that queer people would be more represented in recent years. But there has still not been a single year with more 
-than 5 queer characters introduced in DC, and 7 for Marvel. Compare this to the number of straight characters introduced 
-every year, which hovers in the hundreds for Marvel and has broken 200 in DC often, and you can see that the representation 
-simply does not match the representation in the real world population. Furthermore, the increase of queer characters has not 
-been regular; both companies have had years with good representation immediately preceding years with bad representation. 
-Furthermore, the majority of these queer characters have been gay, as opposed to bisexual or pansexual. This follows a common 
+const postQueer = `With superheroes becoming more mainstream and LGBTQ+ communities becoming more visible, it seems almost
+inevitable that queer people would be more represented in recent years. But there has still not been a single year with more
+than 5 queer characters introduced in DC, and 7 for Marvel. Compare this to the number of straight characters introduced
+every year, which hovers in the hundreds for Marvel and has broken 200 in DC often, and you can see that the representation
+simply does not match the representation in the real world population. Furthermore, the increase of queer characters has not
+been regular; both companies have had years with good representation immediately preceding years with bad representation.
+Furthermore, the majority of these queer characters have been gay, as opposed to bisexual or pansexual. This follows a common
 narrative of single-minded representation which focuses on the most ‘mainstream’ queer identities and erases others.
 `;
 
-const preDoop = `So is there a character who embodies this sense of diversity, resists labels, and transcends representation? 
+const preDoop = `So is there a character who embodies this sense of diversity, resists labels, and transcends representation?
 We think we may have found an answer to that question.
-While gathering the data for this report, we stumbled upon what might be the clearest sign we live in a new time; the fifth 
-horseman of the apocalypse, a true indicator that nothing matters anymore, and our new favorite marvel character whom we will 
-forever revere. His name is Doop. Why is he such an icon? Answer the questions to find out:
+While gathering the data for this report, we stumbled upon a character who may be our new favorite marvel character
+of all time, who may just be one of the most powerful marvel characters to ever exist. His name is Doop.
+Why is he such an icon? Answer the questions to find out:
 `;
 
-const postDoop = `Historically, comic books have served as havens for young men looking for over-sexualized justice-bringing figures, 
-providing role models to those who enjoyed their contents. However, as Marvel and DC push to expand their audience into new generations, 
-it is refreshing to see female characters take on full personalities and back stories, and more queer representation across the board 
+const postDoop = `Historically, comic books have served as havens for young men looking for over-sexualized justice-bringing figures,
+providing role models to those who enjoyed their contents. However, as Marvel and DC push to expand their audience into new generations,
+it is refreshing to see female characters take on full personalities and back stories, and more queer representation across the board
 (even if they take the form of characters like Doop). Now, all kinds of people can take inspiration from heroes and Doops alike.
 `;
 
@@ -153,7 +153,7 @@ class RootComponent extends React.Component {
         className="title"
         > Comics are Evolving </h1>
         <div
-        className="text"
+        className="textbody"
         >{`By Hilina Mekuria, Molly Fortnow, and Howey Qiu`}</div>
         <div className = "textbody">
         	{preBlonde}
@@ -241,12 +241,15 @@ class RootComponent extends React.Component {
           </tbody>
         </table>
         <div class="textbody">
+          <p><a target="_blank" href="https://www.google.com/search?q=doop&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiFj7WO_d_iAhVQ1qwKHXIyBRAQ_AUIECgB&biw=1200&bih=1214">
+          Please click this to see what Doop looks like!</a></p>
         	{postDoop}
         </div>
         <div id="doopinfo">
-          <h3>Doop Sources (Doources):</h3>
+          <h3>Doop Sources:</h3>
           <p><a href="https://lgbt.wikia.org/wiki/Doop_(comics)">Bi-Doop</a></p>
           <p><a href="https://media.comicbook.com/wp-content/uploads/2012/08/doop-thor-640x320.jpg">Strong-Doop</a></p>
+          <p><a href="https://marvel.fandom.com/wiki/Doop_(Earth-616)">Doop Wiki</a></p>
         </div>
       </div>
     );

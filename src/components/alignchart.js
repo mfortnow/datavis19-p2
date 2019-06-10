@@ -83,7 +83,7 @@ export default class Chart3 extends Component {
           onNearestXY={v => this.setState({value: v})}
           onSeriesMouseOut={v => this.setState({value: false})}
         />
-        {value !== false && <Hint value={{Number: value.y}} />}
+        {value !== false && <Hint value={value} />}
         <XAxis />
         <YAxis />
         </XYPlot>
